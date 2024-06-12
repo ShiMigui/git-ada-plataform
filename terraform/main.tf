@@ -52,10 +52,12 @@ module "vpc" {
   enable_vpn_gateway = true
 
   tags = {
-    Terraform = "true"
+    Terraform   = "true"
     Environment = "dev"
   }
 }
+
+output "ip_privado" { value = aws_instance.web.private_ip }
 
 # Commands:
 # terraform init, init and install modules like 'vpc'
