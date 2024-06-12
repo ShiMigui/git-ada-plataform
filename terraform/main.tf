@@ -1,17 +1,17 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.53.0"
     }
   }
 }
 
+# Provider configurations
 provider "aws" {
-  # Configuration options
+  region = "us-east-1"
 }
 
-# Recurso EC2
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -28,11 +28,17 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+# Recurso EC2
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "ANiceName"
   }
 }
+
+# Commands:
+# terraform plan
+# terraform apply 
+# terraform destroy
