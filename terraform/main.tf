@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = aws_instance.web.key_name
+  name = var.vpc_name
   cidr = "10.0.0.0/16"
 
   azs             = ["sa-east-1a", "sa-east-1b", "sa-east-1c"]
