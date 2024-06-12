@@ -58,6 +58,7 @@ module "vpc" {
 }
 
 # Commands:
+# terraform init, init and install modules like 'vpc'
 # terraform plan
 # terraform apply 
 # terraform destroy
