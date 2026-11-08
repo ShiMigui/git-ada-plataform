@@ -9,3 +9,7 @@ run: `python main.py` or `python3 main.py` in this directory to play!
 ![Tic tac toe, first turn snapshot](./imgs/turn1.png)
 
 ![Tic tac toe, a winner](./imgs/winner.png)
+
+## License
+
+Released under the [MIT License](./LICENSE).
